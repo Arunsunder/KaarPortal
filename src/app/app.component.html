@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -10,11 +11,12 @@
     </div>
   </div>
 </nav>
-
+<router-outlet></router-outlet>
 <body>
   <h2 class="mt-4 top-0 mb-2  leading-normal sm:sm-heading heading move">Manage Various Portal at One Spot</h2>
   <p class="subheading max-w-2xl">
     Welcome to Kaar Portal Management System.Manage the Customer,Vendor and Employee Portal at one step.
+    
   </p>
   <div class="row">
     <div class="col-sm-4 d-flex justify-content-center">
@@ -24,7 +26,7 @@
           <h5 class="card-title">Customer Portal</h5>
           <p class="card-text">To understand the functionalities of Sales and Distribution
             and Finance of an Plant.</p>
-          <a href="#" class="btn btn-primary">To Know More..</a>
+          <a href="#" class="btn btn-dark"  (click)="customerroute()" >To Know More..</a>
         </div>
       </div>
     </div>
@@ -36,7 +38,7 @@
           <h5 class="card-title">Vendor Portal</h5>
           <p class="card-text">To understand the functionalities of Material Management
              and Finance module..</p>
-          <a href="#" class="btn btn-primary">To Know More..</a>
+          <button href="#" class="btn btn-dark">To Know More..</button>
         </div>
       </div>
     </div>
@@ -48,12 +50,12 @@
           <h5 class="card-title">Employee Portal</h5>
           <p class="card-text">To understand the functionalities of Human Resource
              and Finance module. .</p>
-          <a href="#" class="btn btn-primary">To Know More..</a>
+          <a href="#" class="btn btn-dark" >To Know More..</a>
         </div>
       </div>
     </div>
 
   </div>
-
+ 
 
 </body>
