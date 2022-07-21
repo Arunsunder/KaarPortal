@@ -7,11 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'KaarPortal';
+  
 
-  constructor(private router: Router) { }
+  constructor() { }
 
-  customerroute() {
-    this.router.navigateByUrl("/customer");
-  }
+  
 }

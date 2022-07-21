@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomerdashboardComponent } from './customerdashboard/customerdashboard.component';
+import { HeaderComponent } from '../header/header.component';
+import { AuthGuardService } from './authGuard/auth-guard.service';
 import { CustomerloginComponent } from './customerlogin/customerlogin.component';
 import { CustomerportalComponent } from './customerportal.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
+
+  
   {
-    path:'',
-    component:CustomerportalComponent
-  },
-  {
-    path:'login',
+    path:'customer/login',
     component:CustomerloginComponent
   },
   {
-    path:'dashboard',
-    component:CustomerdashboardComponent
+    path:'customer/dashboard',
+    component:DashboardComponent,
+    canActivate:[AuthGuardService]
   }
   
 ];

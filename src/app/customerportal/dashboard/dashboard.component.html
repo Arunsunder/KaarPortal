@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+    <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="drawer.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span>Welcome {{'ARUN'}}</span>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" mode="side">
+  
+      <app-customerdashboard></app-customerdashboard>
+      <app-customerfinancial></app-customerfinancial>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+      <div *ngIf="commonservice.selectedItem=='Inquiry data'">
+        <app-inquiry></app-inquiry>
+      </div>
+      <div *ngIf="commonservice.selectedItem=='Sale order data'">
+       <app-saleorder></app-saleorder>
+      </div>
+      <div *ngIf="commonservice.selectedItem=='List of Delivery'">
+       <app-deliverylist></app-deliverylist>
+      </div>
+      <div *ngIf="commonservice.selectedItem=='Invoice details'">
+       <app-invoice></app-invoice>
+       </div>
+       <div *ngIf="commonservice.selectedItem=='Payments and aging'">
+       <app-payments></app-payments>
+       </div>
+       <div *ngIf="commonservice.selectedItem=='Credit/Debit memo'">
+       <app-memo></app-memo>
+       </div>
+       <div *ngIf="commonservice.selectedItem=='Overall sales data'">
+        <app-overallsales></app-overallsales>
+       </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  
+  
