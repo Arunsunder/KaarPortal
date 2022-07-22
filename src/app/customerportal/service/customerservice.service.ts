@@ -18,4 +18,10 @@ export class CustomerserviceService {
     params=params.append("password",password);
     return this.http.get(this.connUrl+"/custLogin",{params:params})
   }
+
+  custProfile(custID:string){
+    let params=new HttpParams();
+    params=params.append("profile",custID)
+    return this.http.get(this.connUrl+'/custProfile',{params})
+  }
 }
