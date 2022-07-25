@@ -1,1 +1,62 @@
-<p>deliverylist works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+   
+    <ng-container matColumnDef="salesdocument">
+      <th mat-header-cell *matHeaderCellDef> Sales Document </th>
+      <td mat-cell *matCellDef="let element"> {{element.VBELN}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="item">
+        <th mat-header-cell *matHeaderCellDef>Item  </th>
+        <td mat-cell *matCellDef="let element"> {{element.POSNR }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="material">
+        <th mat-header-cell *matHeaderCellDef>Material  </th>
+        <td mat-cell *matCellDef="let element"> {{element.MATNR}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.ARKTX}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="deliverygroup">
+        <th mat-header-cell *matHeaderCellDef> Delivery Group </th>
+        <td mat-cell *matCellDef="let element"> {{element.GRKOR }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="barea">
+        <th mat-header-cell *matHeaderCellDef> Buisness Area </th>
+        <td mat-cell *matCellDef="let element"> {{element.GSBER}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="creaton">
+        <th mat-header-cell *matHeaderCellDef> Created On  </th>
+        <td mat-cell *matCellDef="let element"> {{element.ERDAT }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="creatby">
+        <th mat-header-cell *matHeaderCellDef>  Created By</th>
+        <td mat-cell *matCellDef="let element"> {{element.ERNAM }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.ERZET}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="plantgroup">
+        <th mat-header-cell *matHeaderCellDef> Plant Group </th>
+        <td mat-cell *matCellDef="let element"> {{element.WERKS}} </td>
+      </ng-container>
+
+    
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
+
+

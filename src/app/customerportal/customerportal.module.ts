@@ -18,6 +18,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerdashboardComponent } from './customerdashboard/customerdashboard.component';
 import { CustomerfinancialComponent } from './customerfinancial/customerfinancial.component';
@@ -65,7 +66,8 @@ import { CustomerdashboardModule } from './customerdashboard/customerdashboard.m
     MatCardModule,
     MatMenuModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
     
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

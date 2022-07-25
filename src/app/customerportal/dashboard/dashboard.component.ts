@@ -26,7 +26,6 @@ export class DashboardComponent implements OnInit {
     console.log(this.selectedItem)
     this.customerID = localStorage.getItem('currentUser');
     this.custService.custProfile(this.customerID).subscribe(data => {
-      console.log(data);
       var wholeData = JSON.parse(JSON.stringify(data));
       let body;
       const parser = new xml2js.Parser({ strict: false, trim: true });

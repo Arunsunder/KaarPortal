@@ -56,6 +56,8 @@ export class CustomerloginComponent implements OnInit {
         if(this.auth.login(this.custService.loggedin,username)){
           this.route.navigateByUrl('/customer/dashboard');
         }
+      }else{
+        console.log("failed login");
       }
 
     });

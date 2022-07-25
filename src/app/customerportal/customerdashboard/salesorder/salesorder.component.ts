@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerserviceService } from '../../service/customerservice.service';
 
 @Component({
   selector: 'app-salesorder',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesorderComponent implements OnInit {
 
-  constructor() { }
-
+  
+  constructor(private custService:CustomerserviceService) { }
+  customerId=localStorage.getItem('currentUser');
   ngOnInit(): void {
+    console.log(this.customerId);
   }
+  
 
 }

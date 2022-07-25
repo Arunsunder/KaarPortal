@@ -24,4 +24,16 @@ export class CustomerserviceService {
     params=params.append("profile",custID)
     return this.http.get(this.connUrl+'/custProfile',{params})
   }
+
+  salesList(custId:any){
+    let params=new HttpParams();
+    params=params.append("profile",custId);
+    return this.http.get(this.connUrl+'/salesList',{params});
+  }
+
+  deliveryList(custId:any){
+    let params=new HttpParams();
+    params=params.append("profile",custId);
+    return this.http.get(this.connUrl+'/deliveryList',{params});
+  }
 }
