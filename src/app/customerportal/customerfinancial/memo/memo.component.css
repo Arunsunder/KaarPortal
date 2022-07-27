@@ -1,0 +1,14 @@
+table{
+    width:100%;
+}
+
+.mat-header-cell {
+    color: black;
+}
+
+th.mat-header-cell{
+    border-top-color: black;
+    border-bottom-color: black;
+    border-left-color: black;
+    border-right: black;
+}

@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-
-  constructor() { }
+  isloggedin:boolean=false;
+  constructor(private route:Router) { }
   login(loginStatus:boolean,username:string){
     if(loginStatus){
       localStorage.setItem('loginStatus',"true");
@@ -17,7 +18,9 @@ export class AuthenticationService {
 
   logout() {  
     localStorage.removeItem('currentUser');
-    localStorage.removeItem('loginStatus');  
+    localStorage.removeItem('loginStatus');
+    this.route.navigateByUrl('');
+    window.location.reload();  
   } 
 
   public get loggedIn(): boolean {  

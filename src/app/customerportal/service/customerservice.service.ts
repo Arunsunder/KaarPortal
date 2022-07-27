@@ -36,4 +36,28 @@ export class CustomerserviceService {
     params=params.append("profile",custId);
     return this.http.get(this.connUrl+'/deliveryList',{params});
   }
+
+  inquiryList(custId:any){
+    let params=new HttpParams();
+    params=params.append("profile",custId);
+    return this.http.get(this.connUrl+'/inquiryList',{params});
+  }
+
+  payAging(custID:any){
+    let params=new HttpParams();
+    params=params.append("profile",custID);
+    return this.http.get(this.connUrl+'/payAging',{params});
+  }
+
+  creditMemo(custID:any){
+    let params=new HttpParams();
+    params=params.append("profile",custID);
+    return this.http.get(this.connUrl+'/creditMemo',{params});
+  }
+
+  debitMemo(custID:any){
+    let params=new HttpParams();
+    params=params.append("profile",custID);
+    return this.http.get(this.connUrl+'/debitMemo',{params});
+  }
 }

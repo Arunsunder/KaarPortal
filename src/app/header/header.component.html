@@ -6,8 +6,8 @@
         <a class="navbar-brand mb-0 h1 title" href="#"> Kaar Technologies</a>
       </a>
       <div class="d-flex">
-        <a href="#" class="btn btn-dark" *ngIf="enableAboutus"><i class="bi bi-file-person"></i> &nbsp; About Us</a>
-        <a href="#" class="btn btn-dark" *ngIf="enableLogout"><i class="bi bi-file-person"></i> &nbsp; Logout</a>
+        <a class="btn btn-dark" href="https://www.kaartech.com/" *ngIf="enableAboutus"><i class="bi bi-file-person"></i> &nbsp; About Us</a>
+        <a class="btn btn-dark" (click)="logout()" *ngIf="enableLogout" ><i class="bi bi-power"></i> &nbsp; Logout</a>
       </div>
     </div>
 </nav>

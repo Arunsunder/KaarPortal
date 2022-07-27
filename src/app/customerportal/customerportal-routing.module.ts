@@ -5,6 +5,7 @@ import { AuthGuardService } from './authGuard/auth-guard.service';
 import { CustomerloginComponent } from './customerlogin/customerlogin.component';
 import { CustomerportalComponent } from './customerportal.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
 
@@ -16,6 +17,11 @@ const routes: Routes = [
   {
     path:'customer/dashboard',
     component:DashboardComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path:'customer/profile',
+    component:ProfileComponent,
     canActivate:[AuthGuardService]
   }
   

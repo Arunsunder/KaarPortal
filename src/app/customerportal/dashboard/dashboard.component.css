@@ -16,7 +16,13 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    background: rgb(117,50,249);
   }
   .content{
     background-color: #cccccc;
   }
+
+  .flexExpand {
+    flex: 1 1 auto;
+}
+

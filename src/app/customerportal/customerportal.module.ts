@@ -31,6 +31,7 @@ import { MemoComponent } from './customerfinancial/memo/memo.component';
 import { OverallsalesComponent } from './customerfinancial/overallsales/overallsales.component';
 import { CustomerdashboardRoutingModule } from './customerdashboard/customerdashboard-routing.module';
 import { CustomerdashboardModule } from './customerdashboard/customerdashboard.module';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { CustomerdashboardModule } from './customerdashboard/customerdashboard.m
     PaymentsComponent,
     MemoComponent,
     OverallsalesComponent,
+    ProfileComponent,
   
   ],
   imports: [

@@ -6,7 +6,13 @@
       (click)="drawer.toggle()">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-    <span>Welcome {{Name}}</span>
+    <span>Welcome {{Name}} &nbsp;<a class="btn btn-light" (click)="profile()"><i class="bi bi-file-earmark-person"> </i></a> </span>
+    
+
+    <!-- <span class="flexExpand"></span>
+    <div >
+      <a class="btn btn-dark"><i class="bi bi-file-earmark-person"> &nbsp;</i> Profile</a>
+    </div> -->
   </mat-toolbar>
   
   <mat-sidenav-container class="sidenav-container">
