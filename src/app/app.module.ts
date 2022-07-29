@@ -24,6 +24,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerdashboardModule } from './customerportal/customerdashboard/customerdashboard.module';
+import { EmployeeportalModule } from './employeeportal/employeeportal.module';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { CustomerdashboardModule } from './customerportal/customerdashboard/cust
     BrowserModule,
     AppRoutingModule,
     CustomerportalModule,
+    EmployeeportalModule,
     HomeModule,
     FormsModule,
     ReactiveFormsModule,
