@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer1.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span>Welcome </span>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer1 class="sidenav" mode="side">
+        <app-vendordashboard></app-vendordashboard>
+        <app-vendorfinancial></app-vendorfinancial>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <div *ngIf="commonservice.selectedItemForVendor =='Request For Quotation'">
+            <app-quotation></app-quotation>
+        </div>
+        <div *ngIf="commonservice.selectedItemForVendor =='Purchase Order'">
+            <app-purchaseorder></app-purchaseorder>
+        </div>
+        <div *ngIf="commonservice.selectedItemForVendor  =='Good Receipt'">
+            <app-receipt></app-receipt>
+        </div>
+        <div *ngIf="commonservice.selectedItemForVendor  =='Invoice details'">
+            <app-invoice></app-invoice>
+        </div>
+        <div *ngIf="commonservice.selectedItemForVendor  =='Payments and aging'">
+            <app-paymentsandaging></app-paymentsandaging>
+        </div>
+        <div *ngIf="commonservice.selectedItemForVendor  =='Credit/Debit memo'">
+            <app-credit-debit></app-credit-debit>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

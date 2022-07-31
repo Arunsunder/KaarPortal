@@ -13,6 +13,8 @@ export class PayrollComponent implements OnInit {
   constructor(private empService:EmployeeServiceService) { }
 
   employeeid=localStorage.getItem('currentUser');
+  displayedColumns:string[]=['paytype','paydate','fpbegin','fpend','fpperiod','seqno']
+  dataSource:any
 
   ngOnInit(): void {
     this.empService.empPayroll(this.employeeid).subscribe(data=>{
@@ -24,9 +26,9 @@ export class PayrollComponent implements OnInit {
       });
       var jsonObject = JSON.parse(JSON.stringify(final));
       var jsonEnvelope = jsonObject['SOAP:ENVELOPE'];
-      console.log(jsonObject)
       var jsonBody = jsonEnvelope['SOAP:BODY']['0']['NS0:ZFM_EMP_PAYROLL_AS.RESPONSE']['0']['RESULT']['0']['ITEM'];
       console.log(jsonBody);
+      this.dataSource=jsonBody;
     })
   }
 

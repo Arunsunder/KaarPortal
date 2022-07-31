@@ -12,6 +12,8 @@ export class LeaverequestComponent implements OnInit {
   constructor(private empService:EmployeeServiceService) { }
 
   employeeid=localStorage.getItem('currentUser');
+  displayedColumns:string[]=['empno','begindate','enddate','absdays','abshours','type','abstype']
+  dataSource:any
 
   ngOnInit(): void {
     this.empService.empLeaverequest(this.employeeid).subscribe(data=>{
@@ -26,6 +28,7 @@ export class LeaverequestComponent implements OnInit {
       console.log(jsonObject)
       var jsonBody = jsonEnvelope['SOAP:BODY']['0']['NS0:ZFM_EMP_LEAVEREQ_AS.RESPONSE']['0']['RESULT']['0']['ITEM'];
       console.log(jsonBody);
+      this.dataSource=jsonBody;
     })
   }
 

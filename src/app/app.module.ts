@@ -25,6 +25,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerdashboardModule } from './customerportal/customerdashboard/customerdashboard.module';
 import { EmployeeportalModule } from './employeeportal/employeeportal.module';
+import { VendorportalModule } from './vendorportal/vendorportal.module';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { EmployeeportalModule } from './employeeportal/employeeportal.module';
     AppRoutingModule,
     CustomerportalModule,
     EmployeeportalModule,
+    VendorportalModule,
     HomeModule,
     FormsModule,
     ReactiveFormsModule,

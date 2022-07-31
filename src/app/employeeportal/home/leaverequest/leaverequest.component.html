@@ -1,16 +1,41 @@
-<div class="container">
-    <table id="table" data-toggle="table" data-flat="true" data-search="true" data-url="jsonBody" >
-      <thead>
-        <tr>
-          <th data-field="0.EMPLOYEENO" data-sortable="true">ID</th>
-          <th data-field="0.VALIDBEGIN" data-sortable="true">Begin Date</th>
-          <th data-field="0.VALIDEND" data-sortable="true">End Date</th>
-          <!-- <th data-field="Nayment.TotalAsset" data-sortable="true">Total Assets</th>
-          <th data-field="Nayment.BalanceDetails.PowerCash" data-sortable="true"><small>Balance Details</small><br/>Power Cash</th>
-          <th data-field="Nayment.BalanceDetails.BlockedCash" data-sortable="true"><small>Balance Details</small><br/>Blocked Cash</th>
-          <th data-field="Nayment.BalanceDetails.creditCash" data-sortable="true"><small>Balance Details</small><br/>Credit Cash</th>
-          <th data-field="Nayment.BalanceDetails.AccountCash" data-sortable="true"><small>Balance Details</small><br/>Account Cash</th> -->
-        </tr>
-      </thead>
-    </table>
-  </div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="empno">
+      <th mat-header-cell *matHeaderCellDef> Employee Number </th>
+      <td mat-cell *matCellDef="let element"> {{element.EMPLOYEENO}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="begindate">
+      <th mat-header-cell *matHeaderCellDef>Begin Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.VALIDBEGIN}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="enddate">
+      <th mat-header-cell *matHeaderCellDef> End Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.VALIDEND}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="absdays">
+      <th mat-header-cell *matHeaderCellDef> Absence Days </th>
+      <td mat-cell *matCellDef="let element"> {{element.ABSENCEDAYS }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="abshours">
+      <th mat-header-cell *matHeaderCellDef> Absence Hours </th>
+      <td mat-cell *matCellDef="let element"> {{element.ABSENCEHOURS}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> Leave Type </th>
+      <td mat-cell *matCellDef="let element"> {{element.NAMEOFABSENCETYPE}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="abstype">
+      <th mat-header-cell *matHeaderCellDef> Absence Type </th>
+      <td mat-cell *matCellDef="let element"> {{element.ABSENCETYPE}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> 
