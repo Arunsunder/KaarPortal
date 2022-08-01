@@ -60,4 +60,10 @@ export class CustomerserviceService {
     params=params.append("profile",custID);
     return this.http.get(this.connUrl+'/debitMemo',{params});
   }
+
+  invoiceList(custID:any){
+    let params=new HttpParams();
+    params=params.append("profile",custID);
+    return this.http.get(this.connUrl+'/invList',{params});
+  }
 }

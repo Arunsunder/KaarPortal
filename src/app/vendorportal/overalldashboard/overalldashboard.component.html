@@ -2,7 +2,7 @@
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer1.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-    <span>Welcome </span>
+    <span>Welcome {{vendorName}} &nbsp; <a class="btn btn-light" (click)="profile()"><i class="bi bi-file-earmark-person"> </i></a> </span>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">

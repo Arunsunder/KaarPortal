@@ -1,1 +1,50 @@
-<p>receipt works!</p>
+ <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+    <ng-container matColumnDef="docnum">
+        <th mat-header-cell *matHeaderCellDef> Goods Document Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.MAT_DOC}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="docyear">
+        <th mat-header-cell *matHeaderCellDef>Document Year </th>
+        <td mat-cell *matCellDef="let element"> {{element.DOC_YEAR}} </td>
+    </ng-container>
+
+   
+
+    <ng-container matColumnDef="docdate">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.DOC_DATE }} </td>
+    </ng-container>
+
+ 
+
+    <ng-container matColumnDef="entrydate">
+        <th mat-header-cell *matHeaderCellDef> Entry Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.ENTRY_DATE}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="entrytime">
+        <th mat-header-cell *matHeaderCellDef> Entry Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.ENTRY_TIME}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef> Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.TR_EV_TYPE}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Entry Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.USERNAME}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="slipvers">
+        <th mat-header-cell *matHeaderCellDef> Slip Version </th>
+        <td mat-cell *matCellDef="let element"> {{element.VER_GR_GI_SLIP}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>  

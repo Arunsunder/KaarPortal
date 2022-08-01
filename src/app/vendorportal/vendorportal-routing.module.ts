@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from '../customerportal/authGuard/auth-guard.service';
 import { OveralldashboardComponent } from './overalldashboard/overalldashboard.component';
 import { VendorloginComponent } from './vendorlogin/vendorlogin.component';
+import { VendorprofileComponent } from './vendorprofile/vendorprofile.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,11 @@ const routes: Routes = [
   {
     path:'vendor/dashboard',
     component:OveralldashboardComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path:'vendor/profile',
+    component:VendorprofileComponent,
     canActivate:[AuthGuardService]
   }
 ];
